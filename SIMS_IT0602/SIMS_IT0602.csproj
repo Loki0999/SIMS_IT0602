@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <None Remove="Views\Teacher\" />
+    <None Remove="Views\Authentication\" />
+    <None Remove="Views\Course\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\css\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\css\img\btec.png" />
+    <None Include="wwwroot\css\img\logi.webp" />
+    <None Include="wwwroot\css\img\logo.webp" />
+    <None Include="wwwroot\css\img\school.webp" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,78 @@
+﻿@model Teacher
+
+<style>
+    body {
+        background-color: #0C2340; /* Dark blue background */
+        color: #FFFF00; /* Yellow text color */
+        font-family: 'Press Start 2P', cursive; /* Retro gaming font */
+        padding: 20px;
+    }
+
+    h1 {
+        color: orange; /* Orange header text color */
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .control-label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #0C2340; /* Dark blue background */
+        color: #FFFF00; /* Yellow text color */
+        border: 1px solid orange; /* Orange border */
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+        .form-control:focus {
+            outline: none;
+            border-color: yellow; /* Yellow border color on focus */
+        }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: orange; /* Orange button background */
+        color: #0C2340; /* Dark blue text color */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn:hover {
+            background-color: #FF5733; /* Dark orange button background on hover */
+        }
+</style>
+
+<h1>Edit Teacher</h1>
+
+@using (Html.BeginForm("Save", "Teacher", FormMethod.Post))
+{
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(m => m.Id)
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, new { Class = "control-label" })
+        @Html.TextBoxFor(m => m.Name, new { Class = "form-control"})
+    </div>
+    <div class="form-group">
+         @Html.LabelFor(m => m.DoB,  new { Class = "control-label" })
+         @Html.TextBoxFor(m => m.DoB, new { Class = "form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Major, new { Class = "control-label" })
+        @Html.TextBoxFor(m => m.Major, new { Class = "form-control" })
+    </div>
+        <input type="submit" value="Save" class="btn btn-primary" />
+    <input type="submit" value="Cancel" class="btn btn-warning" asp-area="" asp-controller="Teacher" asp-action="ManageTeacher" />
+}

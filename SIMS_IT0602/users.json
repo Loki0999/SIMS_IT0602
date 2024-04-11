@@ -1,0 +1,62 @@
+[
+  {
+    "Id": 1,
+    "UserName": "admin",
+    "Pass": "123",
+    "Role": "Admin"
+  },
+  {
+    "Id": 2,
+    "UserName": "teacher",
+    "Pass": "123",
+    "Role": "Teacher"
+  },
+  {
+    "Id": 3,
+    "UserName": "student",
+    "Pass": "123",
+    "Role": "Student"
+  },
+  {
+    "Id": 0,
+    "UserName": "user",
+    "Pass": "123",
+    "Role": "Student"
+  },
+  {
+    "Id": 0,
+    "UserName": "teacher",
+    "Pass": "123",
+    "Role": "Teacher"
+  },
+  {
+    "Id": 0,
+    "UserName": "teacher",
+    "Pass": null,
+    "Role": "Teacher"
+  },
+  {
+    "Id": 0,
+    "UserName": "ok",
+    "Pass": "123",
+    "Role": "Teacher"
+  },
+  {
+    "Id": 0,
+    "UserName": "llll",
+    "Pass": "123",
+    "Role": "Student"
+  },
+  {
+    "Id": 0,
+    "UserName": null,
+    "Pass": null,
+    "Role": null
+  },
+  {
+    "Id": 0,
+    "UserName": null,
+    "Pass": null,
+    "Role": "Student"
+  }
+]

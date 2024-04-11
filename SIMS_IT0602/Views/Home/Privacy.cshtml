@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+        
+        .btn-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+            .btn-container a {
+                margin-left: 10px;
+                text-decoration: none;
+                color: #333;
+                padding: 10px 20px;
+                border: 1px solid #333;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+                font-family: 'Press Start 2P', cursive;
+            }
+
+                .btn-container a:hover {
+                    background-color: #333;
+                    color: #fff;
+                }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            
+        }
+            .container h1
+            {
+                color: #0C2340;
+                font-family: 'Press Start 2P', cursive;
+            }
+            
+        /* New styles added */
+        .content {
+            background-color: #0C2340;
+            color: #FFFFFF;
+            font-family: 'Press Start 2P', cursive;
+            position: relative;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        .footer{
+            font-family: 'Press Start 2P', cursive;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="btn-container">
+                <a class="btn btn-outline-info" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="btn btn-outline-info" asp-area="" asp-controller="Authentication" asp-action="Login">Log In</a>
+                <a class="btn btn-outline-info" asp-area="" asp-controller="Authentication" asp-action="Register">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>About us</h1>
+
+        <!-- Wrap the paragraph with a div and apply the new styles -->
+        <div class="content">
+            <p>
+
+                Two tech enthusiasts, Tu and Thai, set out to create a student management website but ended up with a quirky game advertising platform due to a design mix-up. Instead of scrapping the idea, they blended student management with retro gaming, resulting in the unique Neogeo System. Users navigate through a classic gaming console interface, completing educational missions for experience points and rewards. Despite initial setbacks like a system glitch, they persevered, fixing bugs and enhancing the platform's appeal. Neogeo System transformed into more than just a management tool, becoming a lively hub for students, showcasing how turning mistakes into opportunities can lead to unexpected success.(J4f)
+            </p>
+        </div>
+    </div>
+</body>
+</html>

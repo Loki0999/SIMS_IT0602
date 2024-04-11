@@ -1,0 +1,142 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Homepage</title>
+    <style>
+        /* CSS styles can be added here */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0C2340;
+            color: #FFFF00;
+            font-family: 'Press Start 2P', cursive;
+            position: relative;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+            header img {
+                max-width: 50%; /* Giảm chiều rộng hình ảnh xuống 80% */
+                height: auto; /* Đảm bảo tỷ lệ khung hình tự động được duy trì */
+            }
+
+        .container {
+            width: 80%;
+            max-width: 1200px; /* Set maximum width */
+            margin: auto;
+            padding: 20px;
+        }
+
+        .text-dark {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .btn-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+            .btn-container a {
+                margin-left: 10px;
+                text-decoration: none;
+                color: #333;
+                padding: 10px 20px;
+                border: 1px solid #333;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+            }
+
+                .btn-container a:hover {
+                    background-color: #333;
+                    color: #fff;
+                }
+
+        .course-list {
+            list-style-type: disc; /* Change bullet style to disc */
+            padding: 0;
+            color: orangered;
+        }
+
+        .course-item {
+            padding: 10px 0;
+        }
+
+            .course-item h3 {
+                font-size: 18px;
+                margin-bottom: 5px;
+                color: orangered;
+            }
+
+        #logo {
+            position: fixed;
+            width: 150px;
+            height: 150px;
+            top: 100px;
+            left: 100px;
+        }
+
+        .body h1 {
+            font-size: 36px; /* Kích thước phông chữ là 36px */
+            text-align: center; /* Canh giữa tiêu đề */
+        }
+    </style>
+</head>
+<body>
+    <img src="/css/img/logo.png" alt="Logo" id="logo">
+    <header>
+        <a><img src="/css/img/logo2.png" /></a>
+
+    </header>
+
+    <h1>Welcome to our homepage</h1>
+
+    <div class="container">
+        <a class="text-dark">NEOGEO SYSTEM</a>
+        <div class="btn-container">
+            <a class="btn btn-outline-info" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            <a class="btn btn-outline-info" asp-area="" asp-controller="Home" asp-action="Privacy">About Us</a>
+            <a class="btn btn-outline-info" asp-area="" asp-controller="Authentication" asp-action="Login">Log In</a>
+            <a class="btn btn-outline-info" asp-area="" asp-controller="Authentication" asp-action="Register">Register</a>
+        </div>
+        <h2>About NeoGeo System</h2>
+        <p>NeoGeo System is a leading institution committed to providing the best quality education to students.</p>
+
+        <h2>List of Majors:</h2>
+        <ul class="course-list">
+            <li class="course-item">
+                <h3>Game Business</h3>
+            </li>
+            <li class="course-item">
+                <h3>Coding game</h3>
+            </li>
+            <li class="course-item">
+                <h3>Game Client Platform</h3>
+            </li>
+            <li class="course-item">
+                <h3>Unity & Godot & Unreal Engine</h3>
+            </li>
+            <!-- Add more items as needed -->
+        </ul>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,111 @@
+﻿@model User
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Page</title>
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive;
+            position: relative;
+            background-color: #f8f9fa; /* Light gray background */
+            margin: 0;
+            padding: 20px;
+            display: flex; /* Use flexbox for vertical and horizontal centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 100vh; /* Set full height of viewport */
+        }
+
+        .container {
+            width: 100%; /* Set width to 80% of the viewport */
+            max-width: 600px; /* Set maximum width to 400px */
+            
+        }
+
+        
+
+        h1 {
+            color: #FFA500; /* Orange color */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .control-label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%; /* Set width to 100% to fill the container */
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: 4px; /* Add a small margin between buttons */
+            align-items: center;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #0056b3; /* Darker shade of blue */
+            }
+
+            input[type="submit"].btn-cancel {
+                margin-top: 5px;
+            }
+
+        .error-message {
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Register</h1>
+        @using (Html.BeginForm("Register", "Authentication", FormMethod.Post))
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.UserName, new { Class = "control-label" })
+                @Html.TextBoxFor(m => m.UserName,
+                         new { placeholder = "User Name", Class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Pass, new { Class = "control-label" })
+                @Html.PasswordFor(m => m.Pass,
+                         new { placeholder = "Password", Class = "form-control" })
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="Role" id="inlineRadio1" value="Student">
+                <label class="form-check-label" for="inlineRadio1">Student</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="Role" id="inlineRadio2" value="Teacher">
+                <label class="form-check-label" for="inlineRadio2">Teacher</label>
+            </div>
+            <div class="error-message">
+                @ViewBag.error
+            </div>
+            <br />
+            <input type="submit" value="Register" class="btn btn-info" />
+            <input type="submit" value="Cancel" class="btn-cancel" asp-area="" asp-controller="Home" asp-action="Index" />
+        }
+    </div>
+</body>
+</html>
+
+

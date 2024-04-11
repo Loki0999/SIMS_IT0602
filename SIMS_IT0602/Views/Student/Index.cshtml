@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0C2340;
+            color: #FFFFFF;
+            font-family: 'Press Start 2P', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 80px;
+        }
+
+        .logout-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        .list-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            flex-direction: row; /* thêm dòng này để chuyển từ dọc thành ngang */
+        }
+
+        .list-group-item {
+            background-color: #1F3A68;
+            border: none;
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .list-group-item:hover {
+                background-color: #29509E;
+            }
+
+        .list-group-link {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+            .list-group-link:hover {
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+
+        #logo {
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            top: 100px;
+            left: 80px;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <img src="/css/img/logo.png" alt="NeoGeo Logo" id="logo">
+    <div class="logout-container">
+        <a class="btn btn-danger" asp-area="" asp-controller="Home" asp-action="Index">Logout</a>
+    </div>
+    <div class="container">
+        <h1>Welcome To HomePage, Student!</h1>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-action list-group-item-warning"><a href="@Url.Action("ViewClassStudent", "Class")">View Classes</a></li>
+            <li class="list-group-item list-group-item-action list-group-item-warning"><a href="@Url.Action("ViewTeacher", "Teacher")">View Teachers</a></li>
+            <li class="list-group-item list-group-item-action list-group-item-warning"><a href="@Url.Action("ViewCourseStudent", "Course")">View Courses</a></li>
+        </ul>
+    </div>
+</body>
+</html>

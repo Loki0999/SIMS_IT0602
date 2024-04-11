@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIMS_IT0602", "SIMS_IT0602\SIMS_IT0602.csproj", "{5E834673-393E-4199-88F9-90EFB3E4D68D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIMS_TEST", "SIMS_TEST\SIMS_TEST.csproj", "{6F0D45BA-A947-4E40-A92A-F9DD48276335}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E834673-393E-4199-88F9-90EFB3E4D68D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E834673-393E-4199-88F9-90EFB3E4D68D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E834673-393E-4199-88F9-90EFB3E4D68D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E834673-393E-4199-88F9-90EFB3E4D68D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F0D45BA-A947-4E40-A92A-F9DD48276335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F0D45BA-A947-4E40-A92A-F9DD48276335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F0D45BA-A947-4E40-A92A-F9DD48276335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F0D45BA-A947-4E40-A92A-F9DD48276335}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2943A743-7156-46CE-8BA5-A53859AB3FAD}
+	EndGlobalSection
+EndGlobal

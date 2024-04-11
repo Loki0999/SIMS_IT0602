@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 1,
+    "Name": "GB0101",
+    "Major": "Game Business",
+    "Lecturer": "Dinh Van Dong"
+  },
+  {
+    "Id": 2,
+    "Name": "CG0201",
+    "Major": "Coding Game",
+    "Lecturer": "Do Quoc Binh"
+  },
+  {
+    "Id": 3,
+    "Name": "GC0301",
+    "Major": "Game Client Platform",
+    "Lecturer": "Nguyen Van Toan"
+  },
+  {
+    "Id": 4,
+    "Name": "BC0401",
+    "Major": "All Game Design Stuffs",
+    "Lecturer": "Nguyen Thanh Trieu"
+  },
+  {
+    "Id": 5,
+    "Name": "GD0501",
+    "Major": "Unity \u0026 Godot \u0026 Unreal Engine",
+    "Lecturer": "Dinh Van Dong"
+  },
+  {
+    "Id": 6,
+    "Name": "V0606",
+    "Major": "Vtraycing",
+    "Lecturer": "Nguyen Duc Hieu"
+  }
+]

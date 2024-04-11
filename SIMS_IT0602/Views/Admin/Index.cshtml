@@ -1,0 +1,100 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            background-color: #0C2340; /* Dark blue background */
+            color: #FFFF00; /* Yellow text color */
+            font-family: 'Press Start 2P', cursive; /* Retro gaming font */
+            position: relative;
+        }
+
+        h1 {
+            margin-top: 80px;
+            color: #FFFF00; /* Yellow text color */
+        }
+
+        .logout-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
+        #logo {
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            top: 100px;
+            left: 80px;
+            z-index: 9999; /* Ensure logo displays above other page elements */
+        }
+
+        h1 {
+            margin-top: 60px; /* Tăng khoảng cách với tiêu đề */
+            color: #FFFF00; /* Màu văn bản màu vàng */
+            text-align: center; /* Canh giữa tiêu đề */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center; /* Canh giữa các nút */
+            margin-top: 40px; /* Tăng khoảng cách giữa tiêu đề và lưới nút */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Tạo cột 2x2 */
+            justify-content: center; /* Canh giữa theo chiều ngang */
+            gap: 20px; /* Khoảng cách giữa các nút */
+        }
+
+        .nav-item {
+            display: flex;
+            justify-content: center; /* Canh giữa nút theo chiều ngang */
+            align-items: center; /* Canh giữa nút theo chiều dọc */
+        }
+
+        .btn {
+            padding: 20px 40px; /* Phóng to button */
+            background-color: #1abc9c; /* Màu nền xanh lá cây */
+            border: none;
+            border-radius: 25px; /* Góc bo tròn */
+            color: #ecf0f1; /* Màu văn bản trắng */
+            font-family: 'Press Start 2P', cursive; /* Phông chữ retro */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn:hover {
+                background-color: #16a085; /* Màu nền xanh lá cây tối hơn khi di chuột */
+            }d
+    </style>
+</head>
+<body>
+    <img src="~/css/img/logo.png" alt="Logo" id="logo">
+    <div class="logout-container">
+        <a class="btn btn-danger" asp-area="" asp-controller="Home" asp-action="Index">Logout</a>
+    </div>
+    <h1>Welcome, Admin!</h1>
+    <ul>
+        <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="ManageStudent"><button type="button" class="btn btn-info">Manage Students</button></a>
+</li>
+<li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Teacher" asp-action="ManageTeacher"><button type="button" class="btn btn-info">Manage Teachers</button></a>
+</li>
+<li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Course" asp-action="ManageCourse"><button type="button" class="btn btn-info">Manage Courses</button></a>
+</li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Class" asp-action="ManageClass"><button type="button" class="btn btn-info">Manage Classes</button></a>
+        </li>
+    </ul>
+</body>
+</html>
